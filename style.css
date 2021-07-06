@@ -1,0 +1,56 @@
+.fa-plus-square, .fa-filter, .fa-times{
+	color: #419970;
+	font-size:xx-large;
+	cursor: pointer;
+}
+.fa-plus-square:hover, .fa-filter:hover, .fa-times:hover{
+	color: #316b50;
+	font-size:xx-large;
+	cursor: pointer;
+}
+
+.bg-color{
+	background-color: #419970;
+}
+.text-color{
+	color: #419970;
+}
+.assesment-filter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.nav>.nav-item>.active{
+	background-color: #419970 !important ;
+}
+
+.card-header{
+	border:none !important;
+	color: #419970;
+}
+
+.line{
+	border: 1px solid #419970;
+}
+.line-2{
+	border-color: #419970;
+}
+
+thead{
+	background-color: #419970 !important;
+}
+th{
+	color: white;
+}
+
+.btn-add{
+	background-color: #419970;
+	width: 70%;
+}
+
+.modal-footer, .modal-header{
+	border: none;
+}
+
