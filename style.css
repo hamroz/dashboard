@@ -52,7 +52,7 @@
   color: #419970;
 }
 
-.random{
+.random {
   color: #fcfcfc;
   background-color: #994156;
   padding: 4px;
@@ -100,4 +100,11 @@ th {
 
 .bg-white {
   border: 30px;
+}
+
+#container {
+  height: 400px;
+}
+#container {
+  height: 400px;
 }
