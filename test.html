@@ -10,25 +10,551 @@
     <title>Document</title>
 
 
-    <link type="text/css" rel="stylesheet" href="plugins/highcharts/css/highcharts.css" media="all" />
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
 
 </head>
 
 <body>
 
 
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-    </figure>
 
 
 
-    <script src="plugins/highcharts/highcharts.js"></script>
-    <script src="plugins/highcharts/modules/exporting.js"></script>
-    <script src="plugins/highcharts/modules/export-data.js"></script>
-    <script src="plugins/highcharts/modules/accessibility.js"></script>
-    <script src="dist/js/adminlte.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header card-border">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title">Assessments</h3>
+                    <div class="card-tools">
+                        <button class="btn btn-tool" id="funcMenu"></button>
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-1">
+                <table class="table m-0 table-striped table-sm" id="example1">
+                    <thead class="">
+                        <tr>
+                            <th>Region</th>
+                            <th>Area</th>
+                            <th>Type of Activity</th>
+                            <th>Start/End Date</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Rushon</td>
+                            <td>Pastkhuf</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dushanbe</td>
+                            <td>Khatlon</td>
+                            <td>Varzob</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Shughnan</td>
+                            <td>Porshinev</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lenobod</td>
+                            <td>Arjoyca</td>
+                            <td>Archizca</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-danger" style="width:4rem; max-width: 4rem;">Failed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shughnan</td>
+                            <td>Shohdara</td>
+                            <td>Roshtqala</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Rushon</td>
+                            <td>Pastkhuf</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dushanbe</td>
+                            <td>Khatlon</td>
+                            <td>Varzob</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Shughnan</td>
+                            <td>Porshinev</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lenobod</td>
+                            <td>Arjoyca</td>
+                            <td>Archizca</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-danger" style="width:4rem; max-width: 4rem;">Failed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shughnan</td>
+                            <td>Shohdara</td>
+                            <td>Roshtqala</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Rushon</td>
+                            <td>Pastkhuf</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dushanbe</td>
+                            <td>Khatlon</td>
+                            <td>Varzob</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Shughnan</td>
+                            <td>Porshinev</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lenobod</td>
+                            <td>Arjoyca</td>
+                            <td>Archizca</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-danger" style="width:4rem; max-width: 4rem;">Failed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shughnan</td>
+                            <td>Shohdara</td>
+                            <td>Roshtqala</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Rushon</td>
+                            <td>Pastkhuf</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Dushanbe</td>
+                            <td>Khatlon</td>
+                            <td>Varzob</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>GBAO</td>
+                            <td>Shughnan</td>
+                            <td>Porshinev</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-success" style="width:4rem; max-width: 4rem;">Completed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Lenobod</td>
+                            <td>Arjoyca</td>
+                            <td>Archizca</td>
+                            <td>Done</td>
+                            <td><span class="badge badge-danger" style="width:4rem; max-width: 4rem;">Failed</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shughnan</td>
+                            <td>Shohdara</td>
+                            <td>Roshtqala</td>
+                            <td>Construction</td>
+                            <td><span class="badge badge-warning" style="width:4rem; max-width: 4rem;">In
+                                    Process</span>
+                            </td>
+                            <td>
+                                <div class=" btn-group">
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-ellipsis-h color"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-tool">
+                                        <i class="fas fa-pencil-alt color"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <!-- <tfoot>
+                        <tr>
+                            <th>Region</th>
+                            <th>Area</th>
+                            <th>Type of Activity</th>
+                            <th>Start/End Date</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </tfoot> -->
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- DataTables  & Plugins -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="plugins/jszip/jszip.min.js"></script>
+    <script src="plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <!-- <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script> -->
+
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <!-- Page specific script -->
+
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "lengthChange": false,
+                "autoWidth": false,
+                "buttons": ["copy", "csv", "excel", "pdf", "print"]
+            }).buttons().container().appendTo('#funcMenu');
+        });
+    </script>
+
+
+
+
+
+
+
+
 </body>
 
 

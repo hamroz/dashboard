@@ -49,7 +49,7 @@
 
 .card-header {
   border: none !important;
-  color: #419970;
+  color: rgb(0, 0, 0);
 }
 
 .random {
@@ -70,6 +70,11 @@ thead {
 }
 th {
   color: white;
+}
+
+table {
+  text-align: center;
+  /* justify-content: center; */
 }
 
 .btn-add {
@@ -107,4 +112,8 @@ th {
 }
 #container {
   height: 400px;
+}
+
+.specialHeader {
+  padding: 0;
 }
