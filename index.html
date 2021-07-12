@@ -1670,13 +1670,7 @@
                                 </div>
                             </div>
 
-
-
-
-
-
-
-                            <div class="col col-9">
+                            <div class="col col-8">
                                 <div class="card card-widget">
                                     <div class="card-header">
                                         <h3 class="card-title">Population</h3>
@@ -1687,13 +1681,26 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <figure class="highcharts-figure">
-                                            <div id="container"></div>
-                                        </figure>
+                                        <div id="container"></div>
                                     </div>
                                 </div>
                             </div>
 
+                            <div class="col col-4">
+                                <div class="card card-widget">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Pie Chart</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="piechart"></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col col-12">
                                 <div class="card card-widget">
                                     <div class="card-header">
@@ -1705,9 +1712,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <figure class="highcharts-container">
-                                            <div id="assessmentplan"></div>
-                                        </figure>
+                                        <div id="assessmentplan"></div>
                                     </div>
                                 </div>
                             </div>
@@ -3333,7 +3338,71 @@
         <script src="dist/js/dataTables.js"></script>
 
 
-
+        <script>
+            Highcharts.chart('piechart', {
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Browser market shares in January, 2018'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                accessibility: {
+                    point: {
+                        valueSuffix: '%'
+                    }
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Brands',
+                    colorByPoint: true,
+                    data: [{
+                        name: 'Chrome',
+                        y: 61.41,
+                        sliced: true,
+                        selected: true
+                    }, {
+                        name: 'Internet Explorer',
+                        y: 11.84
+                    }, {
+                        name: 'Firefox',
+                        y: 10.85
+                    }, {
+                        name: 'Edge',
+                        y: 4.67
+                    }, {
+                        name: 'Safari',
+                        y: 4.18
+                    }, {
+                        name: 'Sogou Explorer',
+                        y: 1.64
+                    }, {
+                        name: 'Opera',
+                        y: 1.6
+                    }, {
+                        name: 'QQ',
+                        y: 1.2
+                    }, {
+                        name: 'Other',
+                        y: 2.61
+                    }]
+                }]
+            });
+        </script>
     </div>
 </body>
 

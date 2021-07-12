@@ -234,6 +234,7 @@ $(document).ready(function () {
   $("#tableasses").DataTable();
 });
 
+
 // PIN - SIDEBAR
 
 let container = document.querySelector(".content");
