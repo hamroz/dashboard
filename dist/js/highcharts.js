@@ -233,3 +233,17 @@ $(document).ready(function () {
   });
   $("#tableasses").DataTable();
 });
+
+// PIN - SIDEBAR
+
+let container = document.querySelector(".content");
+let pinBtn = document.querySelector("#pin");
+let close = document.querySelector("#close");
+
+pinBtn.addEventListener("click", () => {
+  container.classList.toggle("sticky-sidebar-right");
+});
+
+close.addEventListener("click", () => {
+  container.classList.remove("sticky-sidebar-right");
+});

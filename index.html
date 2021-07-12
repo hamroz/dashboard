@@ -451,27 +451,15 @@
         <aside class="sidebar control-sidebar bg-white elevation-2">
             <!-- Control sidebar content goes here -->
             <div class="p-3 control-sidebar-content">
-                <div class="os-size-auto-observer observed" style="height: calc(100% + 1px);">
-                    <div class="os-resize-observer"></div>
-                </div>
-                <!-- <div class="os-resize-observer-host observed">
-                    <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
-                </div> -->
-
                 <form action="" class="">
                     <div class="row">
-
                         <i class="fas fa-times text-secondary" data-widget="control-sidebar" data-slide="true"
-                            style="font-size: 1.2rem;" title="Close"></i>
+                            style="font-size: 1.2rem;" title="Close" id="close"></i>
 
                         <button title="Reset" type="reset" class="btn btn-tool ml-auto"><i
                                 class="fas fa-redo text-secondary" role="button" type="reset"></i></button>
 
-                        <i class="fas fa-thumbtack text-secondary text-md" title="Pin" id="sidepreopen-control"
-                            aria-expanded="true" aria-controls="sidepre-blocks" data-action="toggle-drawer"
-                            data-side="right" data-preference="sidepre-open"></i>
-
-
+                        <i class="fas fa-thumbtack text-secondary text-md" title="Pin" id="pin"></i>
                     </div>
                     <!-- Header -->
                     <h4 class="text-center text-color font-weight-bold mb-4">Filters</h4>
@@ -490,7 +478,7 @@
 
                             </div>
                         </div>
-                        <!-- /.card-header -->
+
                         <div class="card-body  px-2 py-0">
                             <div>
                                 <label for="datefrom" class="form-label font-weight-normal mb-0">Region</label>
@@ -530,8 +518,8 @@
                                 </select>
                             </div>
                         </div>
-
                     </div>
+
                     <!-- Type of assessment -->
                     <hr class="mt-0">
 
@@ -591,7 +579,6 @@
 
                             </div>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body px-2 py-0">
                             <div class="form-check">
                                 <input class="form-check-input " type="checkbox" value="" id="HVRA">
@@ -636,7 +623,6 @@
 
                             </div>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body px-2 py-0">
                             <div class="form-check">
                                 <input class="form-check-input " type="checkbox" value="" id="HVRA">
@@ -674,7 +660,6 @@
 
                             </div>
                         </div>
-                        <!-- /.card-header -->
                         <div class="card-body p-0 py-0">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -752,6 +737,9 @@
 
 
 
+
+
+
         <div class="content-wrapper" style="min-height: 505.031px;">
             <!-- Content -->
             <section class="content">
@@ -762,16 +750,16 @@
                         <div class="row mb-2">
                             <div class="col-sm-6">
                                 <h1 class="m-0 text-dark">Assessment page</h1>
-                            </div><!-- /.col -->
+                            </div>
                             <div class="col-sm-6">
                                 <ol class="breadcrumb float-sm-right">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
                                     <li class="breadcrumb-item"><a href="#">OR&amp;T</a></li>
                                     <li class="breadcrumb-item active">Assesment</li>
                                 </ol>
-                            </div><!-- /.col -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container-fluid -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Tabs, Filter and Add button -->
@@ -793,9 +781,9 @@
 
                 <div class="tab-content">
                     <div id="currentyear" class="tab-pane active">
-                        <!-- Cards -->
 
-                        <div class="row m-3 ">
+                        <!-- Cards -->
+                        <div class="row m-3">
                             <div class="col-md-2 col-sm-4 col-12">
                                 <div class="card text-center" style="border-radius:15px">
                                     <div class="card-header text-white border-bottom-0 p-1"
@@ -924,104 +912,6 @@
                         <div class="row m-3">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <!-- Table -->
                             <div class="col-md-6">
                                 <div class="card">
@@ -1036,7 +926,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- /.card-header -->
+
                                     <div class="card-body p-1">
                                         <table class="table m-0 table-striped table-sm" id="myTable">
                                             <thead class="">
@@ -1047,7 +937,7 @@
                                                     <th>Start/End Date</th>
                                                     <th>Status</th>
                                                     <th></th>
-                                                    
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -1739,165 +1629,11 @@
                                                         </div>
                                                     </td>
                                                 </tr>
-
                                             </tbody>
-                                            <!-- <tfoot>
-                                                <tr>
-                                                    <th>Region</th>
-                                                    <th>Area</th>
-                                                    <th>Type of Activity</th>
-                                                    <th>Start/End Date</th>
-                                                    <th>Status</th>
-                                                    <th></th>
-                                                </tr>
-                                            </tfoot> -->
                                         </table>
                                     </div>
-                                    <!-- /.card-body -->
                                 </div>
-
-
-
-
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1915,7 +1651,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- /.card-header -->
+
                                     <div class="card-body p-0">
                                         <div class="d-md-flex">
                                             <div class="p-1 flex-fill" style="overflow: hidden">
@@ -1929,88 +1665,54 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!-- /.d-md-flex -->
+                                        </div>
                                     </div>
-                                    <!-- /.card-body -->
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="col col-9">
+                                <div class="card card-widget">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Population</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <figure class="highcharts-figure">
+                                            <div id="container"></div>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col col-12">
+                                <div class="card card-widget">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Gantt</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <figure class="highcharts-container">
+                                            <div id="assessmentplan"></div>
+                                        </figure>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2092,7 +1794,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- /.card-header -->
+
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table m-0 table-striped">
@@ -2151,7 +1853,6 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <!-- /.table-responsive -->
                                     </div>
                                 </div>
                             </div>
@@ -2168,7 +1869,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <!-- /.card-header -->
+
                                     <div class="card-body p-0">
                                         <div class="d-md-flex">
                                             <div class="p-1 flex-fill" style="overflow: hidden">
@@ -2182,164 +1883,12 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div><!-- /.d-md-flex -->
+                                        </div>
                                     </div>
-                                    <!-- /.card-body -->
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- HIGH - CHART -->
-
-                    <!-- <div class="card">
-                        <div class="row">
-                            <div class="col col-9">
-                                <figure class="highcharts-figure">
-                                    <div id="container"></div>
-                                </figure>
-                            </div>
-                        </div>
-                    </div> -->
-
-
-
-
-
-                    <div class="col col-9">
-                        <div class="card card-widget">
-                            <div class="card-header">
-                                <h3 class="card-title">Population</h3>
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                </div>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                                <figure class="highcharts-figure">
-                                    <div id="container"></div>
-                                </figure>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col col-12">
-                        <div class="card card-widget">
-                            <div class="card-header">
-                                <h3 class="card-title">Gantt</h3>
-                                <div class="card-tools">
-                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                        <i class="fas fa-minus"></i>
-                                    </button>
-
-                                </div>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                                <figure class="highcharts-container">
-                                    <div id="assessmentplan"></div>
-                                </figure>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
             </section>
         </div>
@@ -3652,47 +3201,8 @@
                         </form>
                     </div>
                 </div>
-                <!-- /.modal-content -->
             </div>
-            <!-- /.modal-dialog -->
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3726,7 +3236,35 @@
         <footer class="main-footer">
             <strong>©<a href="#"></a>Aga Khan Agency for Habitat</strong>
         </footer>
-        <!-- ./wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         <script src="plugins/highcharts/highcharts.js"></script>

@@ -95,9 +95,9 @@ table {
   color: black;
 }
 
-.content {
+/* .content {
   background-color: #fbf8f2;
-}
+} */
 
 .navcolor {
   background-color: #e8eaf0;
@@ -116,4 +116,17 @@ table {
 
 .specialHeader {
   padding: 0;
+}
+
+.sticky-sidebar-right {
+  margin-right: 15rem;
+}
+
+#pin {
+  cursor: pointer;
+}
+
+.content {
+  background-color: #fbf8f2;
+  transition: 0.4s;
 }
