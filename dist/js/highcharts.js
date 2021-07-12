@@ -325,3 +325,4 @@ Highcharts.chart("piechart", {
     },
   ],
 });
+
