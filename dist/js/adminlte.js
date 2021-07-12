@@ -3585,6 +3585,7 @@
     return Treeview;
   })();
 
+ 
   // HIGHCHARTS
 
   Highcharts.chart("container", {
@@ -3706,3 +3707,5 @@
 //     .container()
 //     .appendTo("#funcMenu");
 // });
+
+

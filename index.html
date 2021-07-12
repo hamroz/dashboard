@@ -32,7 +32,8 @@
     <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -453,13 +454,24 @@
                 <div class="os-size-auto-observer observed" style="height: calc(100% + 1px);">
                     <div class="os-resize-observer"></div>
                 </div>
+                <!-- <div class="os-resize-observer-host observed">
+                    <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+                </div> -->
 
-                <form action="" class="mx-3">
+                <form action="" class="">
                     <div class="row">
+
                         <i class="fas fa-times text-secondary" data-widget="control-sidebar" data-slide="true"
-                            style="font-size: 1.2rem;"></i>
-                        <button type="reset" class="btn btn-tool ml-auto"><i class="fas fa-redo text-secondary"
-                                role="button" type="reset"></i></button>
+                            style="font-size: 1.2rem;" title="Close"></i>
+
+                        <button title="Reset" type="reset" class="btn btn-tool ml-auto"><i
+                                class="fas fa-redo text-secondary" role="button" type="reset"></i></button>
+
+                        <i class="fas fa-thumbtack text-secondary text-md" title="Pin" id="sidepreopen-control"
+                            aria-expanded="true" aria-controls="sidepre-blocks" data-action="toggle-drawer"
+                            data-side="right" data-preference="sidepre-open"></i>
+
+
                     </div>
                     <!-- Header -->
                     <h4 class="text-center text-color font-weight-bold mb-4">Filters</h4>
@@ -467,31 +479,221 @@
 
 
                     <!-- Sub heading -->
-                    <label for="datefrom" class="form-label text-secondary">Region</label>
-                    <select name="" id="" class="form-control form-control-sm mb-4">
+                    <!-- Location -->
+                    <div class="card card-widget  border-0 elevation-0 mb-1">
+                        <div class="card-header mb-1 p-0">
+                            <h3 class="card-title">Location</h3>
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
 
-                        <option value=""></i>Select an option</option>
-                        <option value="">option1</option>
-                        <option value="">option2</option>
-                        <option value="">option3</option>
-                    </select>
-                    <hr>
-                    <!-- Start Date -->
-                    <div>
-                        <label for="datefrom" class="form-label text-secondary">Start Date <span
-                                class="text-danger">*</span></label>
-                        <input type="date" name="" id="datefrom" class="form-control form-control-sm">
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body  px-2 py-0">
+                            <div>
+                                <label for="datefrom" class="form-label font-weight-normal mb-0">Region</label>
+                                <select name="" id="" class="form-control form-control-sm">
+                                    <option value="">Select an option</option>
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="datefrom" class="form-label font-weight-normal mb-0">District</label>
+                                <select name="" id="" class="form-control  form-control-sm">
+                                    <option value="">Select an option</option>
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="datefrom" class="form-label font-weight-normal mb-0">Sub-District</label>
+                                <select name="" id="" class="form-control form-control-sm">
+                                    <option value="">Select an option</option>
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="datefrom" class="form-label mb-0 font-weight-normal">Village</label>
+                                <select name="" id="" class="form-control form-control-sm">
+                                    <option value="">Select an option</option>
+                                    <option value="">option1</option>
+                                    <option value="">option2</option>
+                                    <option value="">option3</option>
+                                </select>
+                            </div>
+                        </div>
+
                     </div>
-                    <br>
-                    <!-- End Date -->
-                    <div>
-                        <label for="datefrom" class="form-label text-secondary">End Date <span
-                                class="text-danger">*</span></label>
-                        <input type="date" name="" id="datefrom" class="form-control form-control-sm">
+                    <!-- Type of assessment -->
+                    <hr class="mt-0">
+
+                    <div class="card card-widget  border-0 elevation-0 mb-1">
+                        <div class="card-header mb-1 p-0">
+                            <h3 class="card-title">Type of assesment</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body px-2 py-0">
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="HVRA">
+                                <label class="form-check-label" for="HVRA">
+                                    HVRA
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="IHA">
+                                <label class="form-check-label" for="IHA">
+                                    IHA
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="urban">
+                                <label class="form-check-label" for="urban">
+                                    Urban Assessment
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="bathymetric">
+                                <label class="form-check-label" for="bathymetric">
+                                    Bathymetric Assessment
+                                </label>
+                            </div>
+                        </div>
+
                     </div>
-                    <hr>
+
+                    <!-- Projects -->
+
+                    <hr class="mt-0">
+
+                    <div class="card card-widget  border-0 elevation-0 mb-1">
+                        <div class="card-header mb-1 p-0 border-bottom-1">
+                            <h3 class="card-title">Projects</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body px-2 py-0">
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="HVRA">
+                                <label class="form-check-label" for="HVRA">
+                                    Core - found
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ihha">
+                                <label class="form-check-label" for="ihha" checked>
+                                    IHHA
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="smsmt">
+                                <label class="form-check-label" for="smsmt">
+                                    SMSMT
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="thrive">
+                                <label class="form-check-label" for="thrive">
+                                    Thrive
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Status -->
+
+                    <hr class="mt-0">
+
+                    <div class="card card-widget  border-0 elevation-0 mb-1">
+                        <div class="card-header mb-1 p-0 border-bottom-1">
+                            <h3 class="card-title">Status</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body px-2 py-0">
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="HVRA">
+                                <label class="form-check-label" for="HVRA">
+                                    Assessed
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="ihha">
+                                <label class="form-check-label" for="ihha" checked>
+                                    Planned to be assesed
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="smsmt">
+                                <label class="form-check-label" for="smsmt">
+                                    In process
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Dates -->
+                    <hr class="mt-0">
+
+                    <div class="card card-widget  border-0 elevation-0 mb-1">
+                        <div class="card-header m-0 p-0 border-bottom-1">
+                            <h3 class="card-title">Date</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+
+                            </div>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0 py-0">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="datefrom"
+                                        class="form-label font-weight-normal mb-0 text-secondary text-sm">Start
+                                        Date<span class="text-danger">*</span></label>
+                                    <input type="date" name="" id="datefrom" class="form-control form-control-sm">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="datefrom"
+                                        class="form-label font-weight-normal mb-0 text-secondary text-sm">End Date <span
+                                            class="text-danger">*</span></label>
+                                    <input type="date" name="" id="datefrom" class="form-control form-control-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-add bg-color text-white mt-5">Apply</button>
+                        <button type="submit" class="btn btn-add bg-color text-white mt-4">Apply</button>
                     </div>
                 </form>
             </div>
@@ -821,165 +1023,6 @@
 
 
                             <!-- Table -->
-                            <!-- <div class="col-md-6">
-                                <div class="card">
-                                    <div class="card-header border-transparent">
-                                        <h3 class="card-title">Assessments</h3>
-                                        <div class="card-tools">
-                                            <button type="button" class="btn btn-tool">
-                                                <i class="fas fa-download"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-tool">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-tool" data-widget="fullscreen">
-                                                <i class="fas fa-expand"></i>
-                                            </button>
-                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                                <i class="fas fa-minus"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body p-1">
-                                        <div class="table-responsive">
-                                            <table class="table m-0 table-striped table-hover"
-                                                style="text-align: center;">
-                                                <thead class="">
-                                                    <tr>
-                                                        <th>Region</th>
-                                                        <th>Area</th>
-                                                        <th>Type of Activity</th>
-                                                        <th>Start/End Date</th>
-                                                        <th>Status</th>
-                                                        <th></th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-success"
-                                                                style="width:4rem; max-width: 4rem;">Completed</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-warning"
-                                                                style="width:4rem; max-width: 4rem;">In
-                                                                Process</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-success"
-                                                                style="width:4rem; max-width: 4rem;">Completed</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-danger"
-                                                                style="width:4rem; max-width: 4rem;">Failed</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-warning"
-                                                                style="width:4rem; max-width: 4rem;">In
-                                                                Process</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>GBAO</td>
-                                                        <td>Rushon</td>
-                                                        <td>Pastkhuf</td>
-                                                        <td>Construction</td>
-                                                        <td><span class="badge badge-danger"
-                                                                style="width:4rem; max-width: 4rem;">Failed</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class=" btn-group">
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-ellipsis-h color"></i>
-                                                                </button>
-                                                                <button type="button" class="btn btn-tool">
-                                                                    <i class="fas fa-pencil-alt color"></i>
-                                                                </button>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-
-
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header card-border specialHeader">
@@ -1004,6 +1047,7 @@
                                                     <th>Start/End Date</th>
                                                     <th>Status</th>
                                                     <th></th>
+                                                    
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -2197,7 +2241,7 @@
 
 
 
-                    
+
 
 
 
@@ -2219,21 +2263,61 @@
 
                     <!-- HIGH - CHART -->
 
-                    <figure class="highcharts-figure">
-                        <div id="container"></div>
-                    </figure>
+                    <!-- <div class="card">
+                        <div class="row">
+                            <div class="col col-9">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div> -->
 
 
 
 
 
+                    <div class="col col-9">
+                        <div class="card card-widget">
+                            <div class="card-header">
+                                <h3 class="card-title">Population</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
 
+                                </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <figure class="highcharts-figure">
+                                    <div id="container"></div>
+                                </figure>
+                            </div>
 
+                        </div>
+                    </div>
 
+                    <div class="col col-12">
+                        <div class="card card-widget">
+                            <div class="card-header">
+                                <h3 class="card-title">Gantt</h3>
+                                <div class="card-tools">
+                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
 
+                                </div>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <figure class="highcharts-container">
+                                    <div id="assessmentplan"></div>
+                                </figure>
+                            </div>
 
-
-
+                        </div>
+                    </div>
 
 
 
@@ -3649,46 +3733,45 @@
         <script src="plugins/highcharts/modules/exporting.js"></script>
         <script src="plugins/highcharts/modules/export-data.js"></script>
         <script src="plugins/highcharts/modules/accessibility.js"></script>
-        
+
         <!-- jQuery -->
         <script src="plugins/jquery/jquery.min.js"></script>
-        
+
         <!-- jQuery UI 1.11.4 -->
         <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
         <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-        
+
         <!-- Bootstrap 4 -->
         <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-        
+
         <!-- ChartJS -->
         <script src="plugins/chart.js/Chart.min.js"></script>
-        
+
         <!-- Sparkline -->
         <script src="plugins/sparklines/sparkline.js"></script>
-        
+
         <!-- JQVMap -->
         <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
         <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
-        
+
         <!-- jQuery Knob Chart -->
         <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
-        
+
         <!-- daterangepicker -->
         <script src="plugins/moment/moment.min.js"></script>
         <script src="plugins/daterangepicker/daterangepicker.js"></script>
-        
+
         <!-- Tempusdominus Bootstrap 4 -->
         <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-        
+
         <!-- Summernote -->
         <script src="plugins/summernote/summernote-bs4.min.js"></script>
+
         <!-- overlayScrollbars -->
-        <!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+        <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 
         <!-- AdminLTE App -->
         <script src="dist/js/adminlte.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <!-- <script src="dist/js/demo.js"></script> -->
 
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="dist/js/pages/dashboard.js"></script>
@@ -3707,16 +3790,11 @@
         <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
         <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 
-        <script>
-            $(function () {
-                $("#myTable").DataTable({
-                    "responsive": true,
-                    "lengthChange": true,
-                    "autoWidth": false,
-                    "buttons": ["copy", "csv", "excel", "pdf", "print"]
-                }).buttons().container().appendTo('#funcMenu');
-            });
-        </script>
+        <script src="plugins2/highcharts/modules/gantt.js"></script>
+        <script src="dist/js/highcharts.js"></script>
+        <script src="dist/js/dataTables.js"></script>
+
+
 
     </div>
 </body>
