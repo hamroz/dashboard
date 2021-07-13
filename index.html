@@ -980,12 +980,12 @@
                             </div>
                         </div>
 
+
+
                         <!-- Table and Map -->
                         <div class="row m-3">
-
-
                             <!-- Table -->
-                            <div class="col-md-6 first-block">
+                            <div class="col col-md-6 dynamic-row-1">
                                 <div class="card">
                                     <div class="card-header card-border specialHeader">
                                         <div class="card-header border-transparent">
@@ -993,7 +993,7 @@
                                             <div class="card-tools">
                                                 <button class="btn btn-tool card-body" id="funcMenu"></button>
 
-                                                <a class="btn btn-tool card-body btnAssessment" href="#" role="button">
+                                                <a class="btn btn-tool card-body btnTable" href="#" role="button">
                                                     <i class="fas fa-expand-arrows-alt"></i>
                                                 </a>
 
@@ -1005,7 +1005,7 @@
                                     </div>
 
                                     <div class="card-body p-1  ">
-                                        <table class="table m-0 table-striped table-sm" id="myTable">
+                                        <table class="table m-0 table-sm table-hover" id="myTable">
                                             <thead class="">
                                                 <tr>
                                                     <th>Region</th>
@@ -1017,7 +1017,7 @@
 
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody title="SOME ADDITIONAL INFO">
                                                 <tr>
                                                     <td>GBAO</td>
                                                     <td>Rushon</td>
@@ -1712,10 +1712,8 @@
                                 </div>
                             </div>
 
-
-
                             <!-- Map -->
-                            <div class="col-md-6 second-block">
+                            <div class="col col-md-6 dynamic-row-2">
                                 <div class="card">
                                     <div class="card-header">
                                         <h3 class="card-title">Map of Research Area</h3>
@@ -1748,9 +1746,17 @@
                             </div>
                         </div>
 
+
+
+
+
+
+
+
                         <!-- Population and Pie Chart -->
                         <div class="row m-3">
-                            <div class="col col-8 third-block">
+                            <!-- POPULATION -->
+                            <div class="col col-md-8 dynamic-row-3">
                                 <div class="card card-widget">
                                     <div class="card-header">
                                         <h3 class="card-title">Population</h3>
@@ -1769,7 +1775,8 @@
                                 </div>
                             </div>
 
-                            <div class="col col-4 fourth-block">
+                            <!-- PIE-CHART -->
+                            <div class="col col-md-4 dynamic-row-4">
                                 <div class="card card-widget">
                                     <div class="card-header">
                                         <h3 class="card-title">Pie Chart</h3>
@@ -1790,17 +1797,27 @@
 
                         </div>
 
+
+
+
+
+
+
+
+
+
+
+
                         <!-- GANTT -->
                         <div class="row m-3">
-
-                            <div class="col col-12 fifth-block">
+                            <div class="col col-md-12">
                                 <div class="card card-widget">
                                     <div class="card-header">
                                         <h3 class="card-title">Gantt</h3>
                                         <div class="card-tools">
-                                            <a class="btn btn-tool card-body btnGantt" href="#" role="button">
+                                            <!-- <a class="btn btn-tool card-body" href="#" role="button">
                                                 <i class="fas fa-expand-arrows-alt"></i>
-                                            </a>
+                                            </a> -->
                                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                                 <i class="fas fa-minus"></i>
                                             </button>
@@ -1994,7 +2011,7 @@
 
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
-                                            <table class="table m-0 table-striped">
+                                            <table class="table m-0 table-striped table-hover">
                                                 <thead class="">
                                                     <tr>
                                                         <th>Region</th>
@@ -3529,8 +3546,6 @@
             <script src="dist/js/highcharts.js"></script>
             <script src="dist/js/dataTables.js"></script>
             <script src="dist/js/custom.js"></script>
-
-
         </div>
     </div>
 </body>

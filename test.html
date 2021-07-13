@@ -1,27 +1,50 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+    <style>
+        button {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+        }
 
+        h4 {
+            text-align: center;
+        }
 
+        .main-container {
+            margin-top: 50px;
+        }
+
+        .col {
+            background-color: #ccc;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-2 first-block" style="border: 1px solid red;">
-            <a href="#" class="btn btn-blue">Click</a>
-            Col-MD-2
+    <div class="container">
+        <div class="row dynamic-columns">
+            <button>Toggle</button>
+            <div class="col col-md-2" style="border: 1px solid red;">
+                <h4>First Column</h4>
+            </div>
+            <div class="col col-md-2" style="border: 1px solid green;">
+                <h4>Second Column</h4>
+            </div>
         </div>
-
-
-
     </div>
 
 
     <script>
-        $('.btn').click(function () {
-            $(this).parents('.row').find('.first-block').toggleClass('col-md-2 col-md-12');
+        $("button").click(function () {
+            $(".dynamic-columns .col:first").removeClass("col-md-2");
+            $(".dynamic-columns .col:first").addClass("col-md-12");
+
         });
     </script>
 </body>
