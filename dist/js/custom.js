@@ -44,14 +44,6 @@ $(".btnMap").click(function () {
   $(".dynamic-row-2").toggleClass("col-md-6 col-md-12");
 });
 
-$(".btnPopulation").click(function () {
-  $(".dynamic-row-3").toggleClass("col-md-8 col-md-12");
-});
-
-$(".btnPieChart").click(function () {
-  $(".dynamic-row-4").toggleClass("col-md-4 col-md-12");
-});
-
 $(document).ready(function () {
   $(".noArrays").removeClass("sorting");
 });
