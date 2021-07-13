@@ -1753,6 +1753,59 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <!-- Population and Pie Chart -->
                         <div class="row m-3">
                             <!-- POPULATION -->
@@ -1761,18 +1814,39 @@
                                     <div class="card-header">
                                         <h3 class="card-title">Population</h3>
                                         <div class="card-tools">
-                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                                <i class="fas fa-minus"></i>
-                                            </button>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-secondary dropdown-toggle"
+                                                    data-toggle="dropdown">
+                                                    Choose Chart
+                                                </button>
+                                                <ul class="nav nav-pills dropdown-menu dropdownSpecial">
+                                                    <li>
+                                                        <a class="dropdown-item" href="#revenue-chart"
+                                                            data-toggle="tab">Container</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" href="#sales-chart"
+                                                            data-toggle="tab">Piechart</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <div class="card-body">
-                                        <div id="container"></div>
+                                        <div class="tab-content p-0 ">
+                                            <div class="tab-pane active" id="revenue-chart">
+                                                <div id="container"></div>
+                                            </div>
+                                            <div class="tab-pane" id="sales-chart">
+                                                <div id="piechart"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- PIE-CHART -->
+                            <!-- OTHER-CHART -->
                             <div class="col col-md-4">
                                 <div class="card card-widget">
                                     <div class="card-header">
@@ -1784,12 +1858,66 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <div id="piechart"></div>
+
+                                        <!-- SOMETHING TO BE FILLED WITH -->
+
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

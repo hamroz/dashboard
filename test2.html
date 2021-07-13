@@ -2,114 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test 1</title>
-    <!-- Google Font: Source Sans Pro -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 2</title>
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
     <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
     <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
     <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
     <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
     <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- DataTables -->
     <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- summernote -->
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom stylesheet -->
 
+    <link rel="stylesheet" href="test.css">
 </head>
+
 
 <body>
 
-
-    <div class="row m-3" style="border: 1px solid red;">
-        <!-- POPULATION -->
-        <div class="col col-md-8">
+    <div class="row m-3">
+        <section class="col col-md-8">
             <div class="card card-widget">
                 <div class="card-header">
-                    <h3 class="card-title">Population</h3>
+                    <h3 class="card-title">
+                        <i class="fas fa-chart-pie mr-1"></i>
+                        Sales
+                    </h3>
                     <div class="card-tools">
-
-                        <!-- <div class="dropdown btn btn-tool" id="chartType"> -->
-
-                        <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Select Chart
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+                                Choose Chart
                             </button>
-
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Container</button>
-                                <button class="dropdown-item" type="button">Pie Chart</button>
-                            </div> -->
-                        <!-- </div> -->
-
-
-
-
-
-
-
-
-
-                        <select class="form-control dropdown-toggle " id="chartType">
-                            <option value="line">Line</option>
-                            <option value="pie">Pie</option>
-                        </select>
-
-
-
-
-
-
-
-                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
+                            <ul class="nav nav-pills dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#revenue-chart" data-toggle="tab">Container</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#sales-chart" data-toggle="tab">Piechart</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-
-                    <!-- <div class="form-group">
-                        <label for="sel1">Select list:</label>
-                        <select class="form-control dropdown-toggle" id="sel1">
-                            <option>Graph 1</option>
-                            <option>Graph 2</option>
-                            <option>Graph 3</option>
-                            <option>Graph 4</option>
-                        </select>
-                    </div> -->
                 </div>
-
-
 
                 <div class="card-body">
-                    <div id="container"></div>
-                    <!-- <div id="piechart"></div> -->
-
+                    <div class="tab-content p-0 ">
+                        <div class="tab-pane active" id="revenue-chart">
+                            <div id="container"></div>
+                        </div>
+                        <div class="tab-pane" id="sales-chart">
+                            <div id="piechart"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -179,21 +146,14 @@
     <script src="dist/js/dataTables.js"></script>
     <script src="dist/js/custom.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
+
 
 
 
     <script>
         // PIE - CHART
 
-        var ctx = document.getElementById("myChart").getContext("2d");
-        ctx.canvas.width = 600;
-        ctx.canvas.height = 200;
-
-
-
-        var dataMap = Highcharts.chart("piechart", {
+        Highcharts.chart("piechart", {
             chart: {
                 plotBackgroundColor: null,
                 plotBorderWidth: null,
@@ -265,30 +225,51 @@
                 ],
             }, ],
         });
-
-
-
-        var currentChart;
-
-        function updateChart() {
-            if (currentChart) {
-                currentChart.destroy();
-            }
-
-            var determineChart = $("#chartType").val();
-
-            var params = dataMap[determineChart]
-            currentChart = new Chart(ctx)[params.method](params.data, {});
-        }
-
-        $('#chartType').on('change', updateChart)
-        updateChart();
     </script>
 
 
 
 
-    <!-- <script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js'></script>
+
+
+    <canvas id="myChart"></canvas>
+    <select id="chartType">
+        <option value="line">Line</option>
+        <option value="pie">Pie</option>
+    </select>
+
+
+
+
+    <script>
         var ctx = document.getElementById("myChart").getContext("2d");
         ctx.canvas.width = 600;
         ctx.canvas.height = 200;
@@ -351,9 +332,10 @@
 
         $('#chartType').on('change', updateChart)
         updateChart();
-    </script> -->
+    </script>
 
 
+-->
 
 </body>
 
